@@ -1,0 +1,36 @@
+[color]
+  ui = true
+[alias]
+  b = branch
+  f = fetch --prune
+  s = status
+  lol = log --pretty=oneline --abbrev-commit --graph --decorate
+  plog = log --graph --oneline --all
+  co = checkout
+  cp = cherry-pick
+  c = commit
+  l = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  pr = pull --rebase
+  sl = shortlog -ns
+[core]
+  editor = nvim
+  trustExitCode = true
+  excludesfile = ~/.gitignore_global
+[push]
+  default = current
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true
+[pager]
+  diff = diff-so-fancy | less --tabs=1,5 -RFX
+  show = diff-so-fancy | less --tabs=1,5 -RFX
+[user]
+	name = Anthony Sceresini
+	email = asceresini@gmail.com
+[git]
+[github]
+[credential]
+	helper = store
